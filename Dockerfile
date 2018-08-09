@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.8
 
 RUN apk --no-cache add libcap-ng lzo libstdc++ && \
     apk --no-cache add --virtual .bdeps alpine-sdk git automake autoconf libtool libcap-ng-dev lzo-dev && \

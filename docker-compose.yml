@@ -1,0 +1,14 @@
+version: '3'
+services:
+  icecc-scheduler:
+    build:
+      context: ./docker-icecc-daemon
+    entrypoint: icecc-scheduler -u nobody
+    network_mode: host
+    restart: always
+  icecc-daemon:
+    build:
+      context: ./docker-icecc-daemon
+    entrypoint: iceccd -vv -u nobody
+    network_mode: host
+    restart: always
