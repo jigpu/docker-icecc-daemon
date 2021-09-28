@@ -2,13 +2,13 @@ version: '3'
 services:
   icecc-scheduler:
     build:
-      context: ./docker-icecc-daemon
+      context: https://github.com/jigpu/docker-icecc-daemon.git
     entrypoint: icecc-scheduler -u nobody
     network_mode: host
     restart: always
   icecc-daemon:
     build:
-      context: ./docker-icecc-daemon
+      context: https://github.com/jigpu/docker-icecc-daemon.git
     entrypoint: iceccd -vv -u nobody
     network_mode: host
     restart: always
